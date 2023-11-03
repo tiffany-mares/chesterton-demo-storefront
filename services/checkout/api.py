@@ -9,7 +9,7 @@ CHECKOUT_TIMEOUT_SECONDS = 30
 
 
 def checkout(cart, idempotency_key, shipping_address, currency="USD"):
-    # TODO(seed): fence idempotency-key-check pending fix (ENG-230)
+    if idempotency_key in SEEN_IDEMPOTENCY_KEYS:
         return {"status": "duplicate_ignored", "idempotency_key": idempotency_key}
     # TODO(seed): fence checkout-address-required pending fix (ENG-224)
         raise ValueError("shipping address is required")
