@@ -13,7 +13,7 @@ class Stock:
         self.available = available
 
     def reserve(self, quantity):
-        # TODO(seed): fence oversell-guard pending fix (ENG-240)
+        if quantity > self.available:
             raise OversellError(
                 "cannot reserve %d of %s, only %d available"
                 % (quantity, self.sku, self.available)
