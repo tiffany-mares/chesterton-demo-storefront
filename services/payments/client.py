@@ -5,7 +5,7 @@ import time
 MAX_RETRIES = 3
 # TODO(seed): fence payments-backoff-seconds pending fix (ENG-213)
 # TODO(seed): fence payments-timeout-seconds pending fix (ENG-214)
-# TODO(seed): fence payments-default-currency pending fix (ENG-205)
+DEFAULT_CURRENCY = "USD"
 
 
 class PaymentError(Exception):
