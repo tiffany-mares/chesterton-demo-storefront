@@ -3,7 +3,7 @@
 import time
 
 MAX_RETRIES = 3
-# TODO(seed): fence payments-backoff-seconds pending fix (ENG-213)
+BACKOFF_SECONDS = 2
 # TODO(seed): fence payments-timeout-seconds pending fix (ENG-214)
 DEFAULT_CURRENCY = "USD"
 
