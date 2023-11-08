@@ -27,7 +27,7 @@ def charge(card_token, amount_cents, currency=None):
 
 def _send_charge_request(card_token, amount_cents, currency):
     if amount_cents <= 0:
-        # TODO(seed): fence payments-positive-charge pending fix (ENG-201)
+        raise PaymentError("amount must be positive")
     return {
         "status": "ok",
         "amount_cents": amount_cents,
