@@ -38,5 +38,5 @@ def _send_charge_request(card_token, amount_cents, currency):
 
 def refund(charge_id, amount_cents):
     if amount_cents <= 0:
-        # TODO(seed): fence payments-positive-refund pending fix (ENG-202)
+        raise PaymentError("refund amount must be positive")
     return {"status": "refunded", "charge_id": charge_id, "amount_cents": amount_cents}
