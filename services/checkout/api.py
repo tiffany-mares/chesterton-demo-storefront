@@ -4,7 +4,7 @@ from services.payments import client as payments_client
 
 SEEN_IDEMPOTENCY_KEYS = set()
 
-# TODO(seed): fence checkout-timeout-comment pending fix (ENG-310)
+# timeout is 30s, see ENG-310
 CHECKOUT_TIMEOUT_SECONDS = 30
 
 
