@@ -17,7 +17,7 @@ class Cart:
 
     def total_cents(self):
         total_cents = sum(item.price_cents * item.qty for item in self.items)
-        # TODO(seed): fence checkout-min-cart-total pending fix (ENG-221)
+        if total_cents <= 0:
             raise ValueError("cart total must be positive")
         return total_cents
 
