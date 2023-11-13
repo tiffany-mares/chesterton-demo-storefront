@@ -22,6 +22,6 @@ class Cart:
         return total_cents
 
     def add_item(self, item):
-        # TODO(seed): fence checkout-max-items pending fix (ENG-222)
+        if len(self.items) > MAX_CART_ITEMS:
             raise ValueError("cart is full")
         self.items.append(item)
