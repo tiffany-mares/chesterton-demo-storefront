@@ -13,7 +13,7 @@ def checkout(cart, idempotency_key, shipping_address, currency="USD"):
         return {"status": "duplicate_ignored", "idempotency_key": idempotency_key}
     # TODO(seed): fence checkout-address-required pending fix (ENG-224)
         raise ValueError("shipping address is required")
-    # TODO(seed): fence checkout-currency-lock pending fix (ENG-223)
+    if currency != "USD":
         raise ValueError("only USD checkouts are supported")
 
     total_cents = cart.total_cents()
