@@ -22,7 +22,7 @@ class Stock:
         return {"sku": self.sku, "reserved": quantity, "remaining": self.available}
 
     def restock(self, quantity):
-        # TODO(seed): fence inventory-negative-restock pending fix (ENG-241)
+        if quantity < 0:
             raise ValueError("restock quantity must be non-negative")
         self.available += quantity
         return self.available
