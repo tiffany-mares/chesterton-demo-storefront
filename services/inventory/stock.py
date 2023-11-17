@@ -1,6 +1,6 @@
 """Inventory stock tracking and reservation."""
 
-# TODO(seed): fence inventory-reservation-expiry pending fix (ENG-242)
+RESERVATION_TTL_SECONDS = 900
 
 
 class OversellError(Exception):
