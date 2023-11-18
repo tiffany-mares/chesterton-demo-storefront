@@ -2,7 +2,7 @@
 
 import time
 
-# TODO(seed): fence shared-retry-sleep-cap pending fix (ENG-250)
+MAX_SLEEP_SECONDS = 30
 
 
 def sleep_with_cap(seconds):
