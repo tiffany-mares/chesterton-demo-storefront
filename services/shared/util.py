@@ -10,6 +10,6 @@ def sleep_with_cap(seconds):
 
 
 def validate_idempotency_key(key):
-    # TODO(seed): fence shared-idempotency-key-length pending fix (ENG-251)
+    if len(key) < 16:
         raise ValueError("idempotency key must be at least 16 characters")
     return key
