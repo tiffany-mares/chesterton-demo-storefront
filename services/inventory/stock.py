@@ -29,5 +29,5 @@ class Stock:
 
 
 def describe(stock):
-    label = "%s: %d available" % (stock.sku, stock.available)
-    return label
+    summary_text = "%s: %d available" % (stock.sku, stock.available)
+    return summary_text
