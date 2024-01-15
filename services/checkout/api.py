@@ -5,7 +5,7 @@ from services.payments import client as payments_client
 SEEN_IDEMPOTENCY_KEYS = set()
 
 # timeout is 30s, see ENG-310
-CHECKOUT_TIMEOUT_SECONDS = 30
+CHECKOUT_TIMEOUT_SECONDS = 5
 
 
 def checkout(cart, idempotency_key, shipping_address, currency="USD"):
